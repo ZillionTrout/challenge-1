@@ -4,6 +4,7 @@
   padding: 0;
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
 }
 
 /**** Color variables ****/
@@ -17,6 +18,7 @@
 
 body {
   background-color: var(--basic-white);
+  margin-bottom: 100px;
 }
 
 /***** Typography ******/
@@ -40,11 +42,76 @@ h4 {
 }
 
 /**** Container *****/
+div.container {
+  width: 100%;
+  /* width: 100vw */
+  padding: 20px;
+}
 
 /***** Header ******/
+div#header {
+  background-color: var(--secondary-red);
+  color: var(--basic-white);
+}
 
 /***** Navbar styles ****/
+nav {
+  width: 100vw;
+  padding: 20px;
+  background-color: var(--basic-white);
+  position: fixed;
+  bottom: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul li img {
+  width: 50px;
+}
 
 /***** Card styles ****/
+article.card {
+  background-color: #fcbe84;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+/*padding: 20px 15px */
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+article.card > img {
+  margin-top: 10px;
+  /*margin: 10px 0*/
+  width: 100%;
+}
+
+article.card > button {
+  background-color: var(--primary-blue);
+  color: var(--basic-white);
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* paddinf 10px 20px */
+  border-radius: 10px;
+}
 
 /******* Search input *******/
+
+form > input.search-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-blue);
+}
+
+form >input.search-input::placeholder {
+  color: var(--primary-blue);
+}
